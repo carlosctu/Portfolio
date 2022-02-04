@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="/design.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header id="title" class="header">
+        <h1 class="text-center">Survey Form</h1>
+        <p id="description" class="description text-center">
+          I will always be forever grateful for your feedback
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Please, enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            name="email"
+            placeholder="Please, enter your e-mail"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="number">Age <span class="clue"> (optional)</span></label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            class="form-control"
+            min="12"
+            max="99"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p class="text-left">Which one is your gender?</p>
+          <select name="gender" id="dropdown" class="form-control">
+            <option disabled selected value>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="cis">Cis Male/Female</option>
+            <option value="trans">Trans Male/Female</option>
+            <option value="non-binary">Non Binary</option>
+            <option value="other">Others</option>
+          </select>
+          </div>
+          <div class="form-group">
+          <p class="text-left">Which option describes your current role?</p>
+          <select name="profession" class="form-control" required>
+            <option disabled selected value>Select your actual role</option>
+            <option value="student">Student</option>
+            <option value="learner">Full time learner</option>
+            <option value="part-time">Part time job</option>
+            <option value="full-time">Full time job</option>
+            <option value="not-say">Prefer not to say</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p class="text-left">Would you recomend FreeCodeCamp to a friend?</p>
+          <label
+            ><input
+              name="user-recomend"
+              type="radio"
+              value="definitely"
+              class="input-radio"
+              checked
+            />
+            For sure!</label
+          >
+          <label
+            ><input
+              name="user-recomend"
+              type="radio"
+              value="perhaps"
+              class="input-radio"
+            />Perhaps</label
+          >
+          <label
+            ><input
+              name="user-recomend"
+              type="radio"
+              value="no"
+              class="input-radio"
+            />Not at all</label
+          >
+        </div>
+        <div class="form-group">
+          <p class="text-left">Why did you get interesed in the course?</p>
+          <select name="course" class="form-control" required>
+            <option disabled selected value>Select your reason</option>
+            <option value="hobbie">I love programming!</option>
+            <option value="work">I work as a software developer</option>
+            <option value="university">
+              Because i want to improve in the university
+            </option>
+            <option value="job">Because i want to get a job in IT field</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p class="text-left">
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              class="input-checkbox"
+              value="front-end-projects"
+            />Front-end Projects</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              class="input-checkbox"
+              value="back-end-projects"
+            />Back-end Projects</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              class="input-checkbox"
+              value="data-visualization"
+            />Data Visualization</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              class="input-checkbox"
+              value="challenges"
+            />Challenges</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              class="input-checkbox"
+              value="video"
+            />Videos</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              class="input-checkbox"
+              value="forum"
+            />Forum</label
+          >
+        </div>
+        <div class="form-group">
+          <p class="text-left">
+            Would you like to leave a comment?<span class="clue"
+              >(optional)</span
+            >
+          </p>
+          <textarea
+            name="comment"
+            id="comment"
+            class="input-textarea"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+        <button type="submit" name="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+      </form>
+  </body>
+</html>
