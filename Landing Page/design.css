@@ -1,0 +1,401 @@
+/*-----font-family-----*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Lato:wght@300&display=swap");
+/*-----Fim font-family-----*/
+
+/*-----Preset-----*/
+:root {
+  /*Declaração de variaveis de cores*/
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-orange: #f47521;
+  --main-black: #23252b;
+}
+
+* {
+  /*Resetando todo o HTML*/
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  /*Tomar os valores da propriedade do elemento pai*/
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/*-----Fim Preset-----*/
+
+/*-----Header-----*/
+#header {
+  display: flex;
+  min-height: 80px;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  background-color: var(--main-orange);
+  background-image: linear-gradient(85deg, #f47521, #f4a460);
+  box-shadow: 0 1px 1px 3px rgba(207, 178, 127, 0.7);
+}
+
+#header-img {
+  height: 80px;
+  width: 240px;
+}
+
+.tracking-in-expand {
+  /* webkit é uma ferramenta utilizada por Safari e Chrome para renderizar os códigos escritos */
+  -webkit-animation: tracking-in-expand 1s ease-out;
+  /*nome da animação / timing / timing-function*/
+  animation: tracking-in-expand 1s ease-out;
+}
+/*-----Keyframes do h2-----*/
+/*-----Keyframes do webkit-----*/
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    /*o que fará no começo*/
+    letter-spacing: -8px;
+    opacity: 0;
+  }
+  40% {
+    /*o que fará quando chege ao 40% do timing do animation*/
+    opacity: 0.6;
+  }
+  100% {
+    /*o que fará quando chege ao 100% do timing do animation*/
+    opacity: 1;
+  }
+}
+/*-----Fim keyframes do webkit-----*/
+/*-----Keyframes normais-----*/
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -8px;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*-----Fim keyframes normais-----*/
+/*-----Fim keyframes do h2-----*/
+/*-----Nav-----*/
+
+#nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  padding: 28px;
+}
+
+#nav-bar a {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+#nav-bar a:hover {
+  background-color: linear-gradient(85deg, #f47521, #f4a460);
+  border: 0.5px solid white;
+  /* border-image: linear-gradient(227.91deg, #106AF2 0%, #00E0FF 100%) 1; */
+  transform: translateY(25px);
+  padding: 16px;
+  color: white;
+}
+
+.nav-link {
+  padding: 0px 16px;
+  color: var(--main-black);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#nav-bar li {
+  text-decoration: none;
+  list-style: none;
+}
+/*-----Fim Nav-----*/
+/*-----Fim Header-----*/
+
+/*-----Form Header-----*/
+
+#form-header {
+  padding: 180px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  justify-self: center;
+  font-family: "Lato", sans-serif;
+  min-height: 280px;
+  background-color: #23252b;
+  color: white;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+}
+
+#form-header h2 {
+  font-size: 36px;
+  line-height: 72px;
+}
+
+#form #email {
+  min-height: 24px;
+  min-width: 320px;
+  margin-bottom: 16px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.btn {
+  font-family: "Lato", sans-serif;
+  height: 24px;
+  min-width: 160px;
+  font-size: 16px;
+}
+
+#form .btn {
+  background-color: #ffdead;
+}
+
+/*-----Video-----*/
+
+.video-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 180px 12px;
+  padding: 8px;
+  border-bottom: 4px solid rgb(128, 19, 54);
+  width: 80%;
+}
+
+.video-desc h3 {
+  margin-top: 12px;
+  font-size: 28px;
+}
+
+.video-desc p {
+  font-size: 22px;
+}
+
+summary {
+  text-align: start;
+  margin: 12px 12px;
+  padding: 8px;
+  font-size: 20px;
+}
+/*-----Details----*/
+.summary-video-desc {
+  display: flex;
+  flex: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 40px 12px;
+  padding: 8px;
+  max-width: 80%;
+  border-bottom: 4px solid rgb(128, 19, 54);
+}
+
+.summary-video-desc h3 {
+  font-size: 28px;
+}
+
+.summary-video-desc p {
+  font-size: 22px;
+}
+/*-----Fim Details----*/
+/*-----Fim Video-----*/
+/*-----Fim Form Header-----*/
+
+/*-----Features-----*/
+
+#features {
+  background-image: url(https://wallpaperaccess.com/full/7807768.png);
+  background-size: 100% 100%;
+  border-top: 4px solid rgb(128, 19, 54);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 24px;
+  margin: 0px 22vh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*-----Media queries-----*/
+@media (max-width: 50em) {
+  .features-grid {
+    margin: 0px 12.5vh;
+  }
+  .flex-desc {
+    padding: 0px 24px;
+  }
+}
+
+@media (max-width: 45em) {
+  .features-grid {
+    margin: 0px 12vh;
+  }
+  .flex-desc {
+    padding: 0px 36px;
+  }
+}
+
+@media (max-width: 18.6em) {
+  .features-grid {
+    margin: 0px 12vh;
+  }
+  .flex-desc {
+    padding: 0px 48px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .features-grid {
+    margin: 0px 50vh;
+  }
+}
+/*-----Fim Media queries-----*/
+
+.box-container {
+  display: grid;
+  grid-template-columns: 240px 360px;
+  background-color: black;
+}
+
+.features-title {
+  justify-content: center;
+  text-align: center;
+  margin: 16px 3.6em;
+}
+
+.flex-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 2em;
+  border-bottom: 4px solid rgb(128, 19, 54);
+}
+
+.fa-circle-check {
+  /*Lembrando que o CSS altera de cima para baixo, se colocar o.gray antes, o icone irá ficar verde*/
+  color: rgb(117, 221, 117);
+  margin-right: 8px;
+}
+
+.gray {
+  color: gray;
+}
+
+/*-----Fim Features-----*/
+
+/*-----Pricing-----*/
+
+#pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--main-black);
+  color: white;
+  padding: 18em 0em;
+  border-top: 4px solid rgb(128, 19, 54);
+}
+
+.pricing-box {
+  display: flex;
+  padding: 0px 24px;
+  margin: 0px 8px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border: 2px solid var(--main-red);
+  height: 400px;
+}
+
+.pricing-desc h2 {
+  font-size: 32px;
+  padding-top: 36px;
+}
+
+.pricing-desc p {
+  font-size: 20px;
+  margin: 3em 0em;
+}
+
+.assinar {
+  font-family: "Lato", sans-serif;
+  height: 24px;
+  min-width: 160px;
+  font-size: 16px;
+  background-color: #ffdead;
+}
+
+/* 
+#pricing .pricing-box{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+text-align: center;
+} */
+
+footer {
+  font-family: "Righteous", cursive;
+  color: rgba(255, 255, 255, 0.863);
+  padding: 20px;
+  background-color: var(--main-black);
+  border-top: 4px solid rgb(128, 19, 54);
+}
+
+footer a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  margin: 0px 24px;
+  font-size: 16px;
+}
+
+footer p {
+  margin-left: 35%;
+  max-width: 360px;
+  text-align: justify;
+  align-self: center;
+  align-content: center;
+  font-size: 16px;
+}
+
+#footer-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+@media (min-width: 960px) {
+  footer p {
+    max-width: 640px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 65%;
+  }
+
+  footer a{
+    font-size: 20px;
+  }
+}
