@@ -140,6 +140,10 @@ header p {
   width: 100%;
 }
 
+.project-image{
+  background-size: contain;
+}
+
 @media (max-width: 30.625em) {
   .projects-section {
     padding: 6rem 1rem;
@@ -175,7 +179,7 @@ header p {
 .project-image {
   height: 480px;
   width: 100%;
-  object-fit: cover;
+  background-size: contain;
 }
 
 .project-title {
